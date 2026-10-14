@@ -2183,16 +2183,19 @@ function verificarCandadoAnimado() {
                 }
             }, 150); 
         }
-        function procesarVictoriaFase(mod, fase) {
+function procesarVictoriaFase(mod, fase) {
             progreso[mod][fase] = true;
             guardarEstado();
-            if (mod === 1 && progreso[1].every(x => x === true)) {
-            abrirHabitacion(1); 
-            setTimeout(() => {
-            mostrarAlerta("MÓDULO 1 ESTABILIZADO\nVolviendo al Nexo Central.");
-            irAMapa(); 
-          }, 2000);
-        }
+            
+            if (mod === 1 && progreso[1].every(x => x === true)) {.
+                mostrar('pantalla-habitacion');
+                actualizarMapas();
+                
+                setTimeout(() => {
+                    mostrarAlerta("MÓDULO 1 ESTABILIZADO\nVolviendo al Nexo Central.", "MÓDULO COMPLETADO");
+                    irAMapa(); 
+                }, 2000);
+            }
             else if (progreso[mod].every(x => x === true)) {
                 irAMapa();
             } else {
