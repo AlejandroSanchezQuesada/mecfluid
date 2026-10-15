@@ -762,3 +762,9 @@
 
 /* ================= PANTALLA: PLANTILLA DE TEST ================= */
             #pantalla-nuevo-test .mi-contenedor-test {width: 80%; margin: auto; color: white; text-align: center;padding-top: 80px;}
+
+/* ================= ACCESIBILIDAD ================= */
+/* Indicador de foco visible para navegacion por teclado. Se coloca al final
+   para que gane a los `outline: none` definidos con la misma especificidad. */
+:focus-visible { outline: 3px solid #00ffff; outline-offset: 2px; }
+

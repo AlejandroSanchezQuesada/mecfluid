@@ -1723,3 +1723,20 @@ let inputActivo = null;
                     feed.innerText = "✓ PURGA COMPLETADA. SISTEMA ESTABLE.";
                 }
             })();
+
+/* ================= ACCESIBILIDAD: elementos clicables no semanticos ================= */
+(() => {
+  const activar = (el) => {
+    if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'INPUT') return;
+    if (!el.hasAttribute('role')) el.setAttribute('role', 'button');
+    if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
+    if (el._a11yKey) return;
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+    el._a11yKey = true;
+  };
+  const escanear = () => document.querySelectorAll('[onclick]').forEach(activar);
+  escanear();
+  new MutationObserver(() => escanear()).observe(document.body, { subtree: true, childList: true });
+})();
