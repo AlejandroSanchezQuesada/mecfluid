@@ -1499,11 +1499,6 @@ let inputActivo = null;
             }
         });
 
-// Llamar a la configuración al cargar y cada vez que cambies de pantalla
-window.addEventListener('load', configurarInputsParaTeclado);
-// Parche para que funcione siempre:
-setInterval(configurarInputsParaTeclado, 2000);
-
 /* ================= PANTALLA: PROYECTO "CABLES" ================= */
             (() => {
                 const panel = document.getElementById('panel-juego-cables');
