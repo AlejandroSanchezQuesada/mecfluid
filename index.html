@@ -631,5 +631,23 @@
             <div class="tecla" onclick="teclear('.')">.</div>
             <div class="tecla tecla-larga" style="background: #39ff14; color: #000; margin-top:10px;" onclick="cerrarTeclado()">ACEPTAR</div>
         </div>
+
+    <div id="modal-alerta" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:200000; justify-content:center; align-items:center;">
+        <div class="panel-azul" style="width:500px; border-color:#ff073a;">
+            <h2 id="modal-titulo" style="color:#ff073a; margin-top:0;">ALERTA</h2>
+            <p id="modal-mensaje" style="font-size:20px; color:#fff;"></p>
+            <button class="btn-ui" onclick="document.getElementById('modal-alerta').style.display='none'">[ ENTENDIDO ]</button>
+        </div>
+    </div>
+
+    <div id="modal-prompt" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:200001; justify-content:center; align-items:center;">
+        <div class="panel-azul" style="width:500px; border-color:#00ffff;">
+            <h2 style="color:#00ffff; margin-top:0;">SISTEMA OPERATIVO</h2>
+            <p id="modal-prompt-mensaje" style="font-size:20px; color:#fff;"></p>
+            <input type="text" id="modal-prompt-input" style="width:80%; margin-bottom:20px;">
+            <br>
+            <button id="modal-prompt-btn" class="btn-ui">[ VALIDAR ]</button>
+        </div>
+    </div>
 </body>
 </html>
