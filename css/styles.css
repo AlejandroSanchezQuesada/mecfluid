@@ -36,7 +36,7 @@
         .pantalla.activa { display: flex; z-index: 10; }
         
         /* ================= INICIO ================= */
-        #pantalla-inicio { background: url('fondo (2).png') center/cover; }
+        #pantalla-inicio { background: url('../imagenes/fondo (2).png') center/cover; }
         .boton-inicio { position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%); width: 250px; height: 100px; cursor: pointer; background: rgba(0,0,0,0.01); z-index: 9999; border: none; outline: none; -webkit-tap-highlight-color: transparent; }      
         .input-equipo { font-family: 'Montserrat', sans-serif; font-size: 40px; width: 350px; background: rgba(0, 51, 102, 0.5); color: #00ffff; border: 2px solid #00ffff; text-align: center; padding: 10px; margin: 20px 0; outline: none; text-transform: uppercase; transition: 0.3s;}
         .input-equipo:focus { box-shadow: 0 0 15px currentColor; }
@@ -100,7 +100,7 @@
 
         /* ================= PASILLO CENTRAL (NEXO REACTOR) ================= */
         #pantalla-pasillo { 
-            background: url('reactor.gif') center/cover no-repeat;
+            background: url('../imagenes/reactor.gif') center/cover no-repeat;
             background-color: #000510;
             justify-content: center; align-items: center;
             position: relative;
@@ -141,7 +141,7 @@
 
         /* ================= MAPAS SECTOR 11 ================= */
         #pantalla-mapa { background: #000; justify-content: center; align-items: center; }
-        .escenario-interactivo {position: relative; width: 90vw; max-width: 1400px; aspect-ratio: 16 / 9; background: url('departamento.jpg') center/cover no-repeat; border: 4px solid #333; border-radius: 10px; box-shadow: 0 0 50px rgba(0, 255, 255, 0.2); overflow: hidden;}
+        .escenario-interactivo {position: relative; width: 90vw; max-width: 1400px; aspect-ratio: 16 / 9; background: url('../imagenes/departamento.jpg') center/cover no-repeat; border: 4px solid #333; border-radius: 10px; box-shadow: 0 0 50px rgba(0, 255, 255, 0.2); overflow: hidden;}
         .hotspot {position: absolute; cursor: pointer; border: 3px dashed rgba(0, 255, 255, 0.7); background: rgba(0, 255, 255, 0.15); border-radius: 8px; transition: all 0.3s ease-out; z-index: 10;animation: latido-hotspot 2s infinite alternate ease-in-out; }
 
         @keyframes latido-hotspot {
@@ -167,7 +167,7 @@
 
         /* ================= MAPAS INTERNOS Y PANELES ================= */
         #pantalla-habitacion, #pantalla-habitacion-3, #pantalla-victoria { background: #001a33; }
-        #pantalla-habitacion-2 { background: url('papers.png') center/cover no-repeat !important; background-color: #1a1a1a !important; }
+        #pantalla-habitacion-2 { background: url('../imagenes/papers.png') center/cover no-repeat !important; background-color: #1a1a1a !important; }
         .titulo-mapa { color: #00ffff; font-size: 36px; margin-bottom: 10px; text-transform: uppercase; text-shadow: 0 0 10px #00ffff; }
         .contenedor-mapa { position: relative; width: 800px; height: 480px; border: 2px solid #00ffff; box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); }
         
@@ -179,7 +179,7 @@
         
         /* ================= FONDO ESCRITORIO Y PAPELES (M2) ================= */
         
-        .fondo-escritorio-full { background: url('papers.png') center/cover no-repeat; background-color: #1a1a1a !important; width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+        .fondo-escritorio-full { background: url('../imagenes/papers.png') center/cover no-repeat; background-color: #1a1a1a !important; width: 100vw; height: 100vh; position: relative; overflow: hidden; }
         .papel-interactivo { position: absolute; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s, filter 0.3s; z-index: 5;}
         .expediente-principal {width: 460px !important; height: 570px !important; background: radial-gradient(circle, #f7e7c8 20%, #b9956d 100%) !important;border: none !important; box-shadow:5px 5px 20px rgba(0,0,0,0.4), inset 0 0 60px rgba(101, 67, 33, 0.2) !important; filter: contrast(1.05) brightness(0.98) sepia(0.1); position: absolute; display: flex; align-items: center; justify-content: center; transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);}
         .expediente-principal:hover { transform: translate(-50%, -50%) scale(1.05) rotate(0deg) !important; box-shadow: 20px 30px 50px rgba(0,0,0,0.5), inset 0 0 40px rgba(101, 67, 33, 0.15) !important;}
@@ -211,7 +211,7 @@
         @keyframes pulso-val { 0%, 100% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.1); } }
 
         /* ================= RESTO DE PANELES ================= */
-        #pantalla-enrutador, #pantalla-capilar, #pantalla-quiz, #pantalla-c, #pantalla-c-mini, #pantalla-c-final, #pantalla-d, #pantalla-hab2-megareto, #pantalla-hab3-megareto { background: linear-gradient(rgba(0,30,60,0.95), rgba(0,10,20,0.95)), url('techlab.jpg') center/cover; }
+        #pantalla-enrutador, #pantalla-capilar, #pantalla-quiz, #pantalla-c, #pantalla-c-mini, #pantalla-c-final, #pantalla-d, #pantalla-hab2-megareto, #pantalla-hab3-megareto { background: linear-gradient(rgba(0,30,60,0.95), rgba(0,10,20,0.95)), url('../imagenes/techlab.jpg') center/cover; }
         .panel-azul { background: rgba(0, 43, 77, 0.95); padding: 35px; border-radius: 20px; border: 3px solid #00ffff; width: 520px; text-align: center; backdrop-filter: blur(10px); z-index: 5;}
         
         .panel-quiz, .panel-c-final, #pantalla-c-mini .panel-azul, .panel-d, .panel-delta { width: 800px; }
@@ -394,7 +394,7 @@
         }
         .lienzo-pizarra {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('pizarra.png') center/cover no-repeat;
+            background: url('../imagenes/pizarra.png') center/cover no-repeat;
             transition: filter 0.8s ease, transform 0.8s ease;
             transform-origin: center center; 
         }
@@ -432,7 +432,7 @@
 
 /* ================= MÓDULO 3: TUBERÍA Y GAS ANIMADO ================= */
         
-        .fondo-tuberia-full { background: url('tuberia.png') center/cover no-repeat !important; background-color: #0b151a !important; width: 100vw; height: 100vh; position: relative; overflow: hidden; box-shadow: inset 0 0 200px rgba(0,0,0,0.95);}
+        .fondo-tuberia-full { background: url('../imagenes/tuberia.png') center/cover no-repeat !important; background-color: #0b151a !important; width: 100vw; height: 100vh; position: relative; overflow: hidden; box-shadow: inset 0 0 200px rgba(0,0,0,0.95);}
         .flujo-gas-animado {position: absolute; top: 0; left: 0; width: 200%; height: 100%;
             background: repeating-linear-gradient( 90deg, rgba(100, 255, 150, 0) 0%, rgba(100, 255, 150, 0.05) 10%, rgba(100, 255, 150, 0) 20%);
             filter: blur(20px); opacity: 0.8; pointer-events: none; animation: moverGas 6s linear infinite; z-index: 2;

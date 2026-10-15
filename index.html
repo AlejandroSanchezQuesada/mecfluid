@@ -7,23 +7,23 @@
     <meta name="description" content="AQUALAB: juego educativo de mecánica de fluidos. Explora la presa del Sector 11 y descubre los principios físicos que la sostienen.">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body ontouchstart="">
 
     <script>
         // ================= FIN ESTILOS CSS/PRECARGA DE IMÁGENES ================= //
         const recursosGraficos = [
-            "fondo (2).png", "reactor.gif", "departamento.jpg", "techlab.jpg",
-            "lobby.png", "pasillo-largo.jpg", "compuerta11.jpg",
-            "chico-idle.png", "chico-habla.png", "chico-sorpresa.png", "chico111.png", "presa.gif","valvula.gif",
-            "pizarra.png", "papers.png", "escazul.png"
+            "imagenes/fondo (2).png", "imagenes/reactor.gif", "imagenes/departamento.jpg", "imagenes/techlab.jpg",
+            "imagenes/lobby.png", "imagenes/pasillo-largo.jpg", "imagenes/compuerta11.jpg",
+            "imagenes/chico-idle.png", "imagenes/chico-habla.png", "imagenes/chico-sorpresa.png", "imagenes/chico111.png", "imagenes/presa.gif","imagenes/valvula.gif",
+            "imagenes/pizarra.png", "imagenes/papers.png", "imagenes/escazul.png"
         ];
         recursosGraficos.forEach(ruta => { const img = new Image(); img.src = ruta; });
     </script>
     
     <div id="pantalla-hub" class="pantalla activa">
-        <img src="escazul.png" alt="Logo UPCT" class="upct-logo-lateral">
+        <img src="imagenes/escazul.png" alt="Logo UPCT" class="upct-logo-lateral">
         <div id="fondo-upct-hub"></div>
         <div id="scanlines-hub"></div>
         <div class="circulo-decorativo-hub c1-hub"></div>
@@ -58,21 +58,21 @@
             
             <div class="icono-proyecto" id="proyecto-cables" onclick="mostrar('pantalla-proyecto-cables')">
                 <div class="btn-votar" onclick="event.stopPropagation(); votarProyecto('proyecto-cables')">❤️ <span class="contador-votos">0</span></div>
-                <div class="imagen-icono" style="background-image: url('reactor.gif');"></div>
+                <div class="imagen-icono" style="background-image: url('imagenes/reactor.gif');"></div>
                 <div class="titulo-icono">TÍTULO PROYECTO A</div>
                 <div class="equipo-icono">NOMBRE DEL GRUPO</div>
             </div>
 
             <div class="icono-proyecto" id="proyecto-purga" onclick="mostrar('pantalla-proyecto-purga')">
                 <div class="btn-votar" onclick="event.stopPropagation(); votarProyecto('proyecto-purga')">❤️ <span class="contador-votos">0</span></div>
-                <div class="imagen-icono" style="background-image: url('reactor.gif');"></div>
+                <div class="imagen-icono" style="background-image: url('imagenes/reactor.gif');"></div>
                 <div class="titulo-icono">TÍTULO PROYECTO B</div>
                 <div class="equipo-icono">NOMBRE DEL GRUPO</div>
             </div>
     
             <div class="icono-proyecto" id="proyecto-nuevo" onclick="mostrar('pantalla-nuevo-test')">
                 <div class="btn-votar" onclick="event.stopPropagation(); votarProyecto('proyecto-nuevo')">❤️ <span class="contador-votos">0</span></div>
-                <div class="imagen-icono" style="background-image: url('reactor.gif');"></div>
+                <div class="imagen-icono" style="background-image: url('imagenes/reactor.gif');"></div>
                 <div class="titulo-icono">TÍTULO PROYECTO</div>
                 <div class="equipo-icono">TU EQUIPO</div>
             </div>
@@ -133,7 +133,7 @@
         <div id="capa-fondo-B" class="capa-fondo bg-linear-caminar" style="opacity: 0; z-index: 0;"></div>
         
         <div id="caja-narrador" onclick="avanzarHistoria()">
-            <img id="foto-narrador" src="chico111.png" alt="Narrador">
+            <img id="foto-narrador" src="imagenes/chico111.png" alt="Narrador">
             <div id="texto-narrador"></div>
         </div>
     </div>
@@ -156,12 +156,12 @@
         
         <div class="contenedor-puertas">
             <div class="puerta-box activa" onclick="irAMapa()">
-                <img src="presa.gif" alt="Icono Presa Sector 11" class="icono-imagen-puerta">
+                <img src="imagenes/presa.gif" alt="Icono Presa Sector 11" class="icono-imagen-puerta">
                 <div class="titulo-puerta">SECTOR 11</div>
                 <div class="subtitulo-puerta">PRUEBAS UNIDAD 1</div>
             </div>
         <div class="puerta-box bloqueada" id="puerta-sector-12" onclick="intentarAbrir()">
-                <img src="valvula.gif" alt="Icono Válvula Sector 12" class="icono-imagen-puerta">
+                <img src="imagenes/valvula.gif" alt="Icono Válvula Sector 12" class="icono-imagen-puerta">
                 <div class="titulo-puerta">SECTOR 12</div>
                 <div class="subtitulo-puerta" id="subtitulo-s12">[ BLOQUEADO ]<br>PRUEBAS UNIDAD 2</div>
             </div>
@@ -615,7 +615,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
          <div id="teclado-virtual">
             <div class="tecla" onclick="teclear(1)">1</div>
             <div class="tecla" onclick="teclear(2)">2</div>

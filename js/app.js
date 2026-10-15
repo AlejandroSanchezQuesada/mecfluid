@@ -140,11 +140,11 @@
         let fondoActual = null; 
 
         const guionAqualab = [
-            { txt: "Saludos, equipo. Bienvenidos a las instalaciones subterráneas de AQUAFLUID. Soy Reyn el asistente asignado a vuestro grupo.", bg: "lobby.png", face: "chico111.png" },
-            { txt: "Acompañadme, por favor. Vamos a descender por el corredor principal hacia los laboratorios de pruebas. Nuestra red gestiona fluidos a presiones críticas para toda la ciudad.", bg: "pasillo-largo.jpg", face: "chico-habla.png" },
-            { txt: "Ya hemos llegado a la sala de control del Sector 11. Vamos a proceder a la verificación rutinaria de las válvulas...", bg: "compuerta11.jpg", face: "chico111.png" },
-            { txt: "Los niveles de presión manométrica son estables, el flujo de agua es constante y... Espera. Un momento.", bg: "puerta-sector11.jpg", face: "chico-habla.png" },
-            { txt: "¿Qué es esa lectura? ¡Alerta de cavitación detectada! ¡Fallo estructural inminente en las tuberías principales!", bg: "puerta-sector11.jpg", face: "chico-sorpresa.png", error: true }
+            { txt: "Saludos, equipo. Bienvenidos a las instalaciones subterráneas de AQUAFLUID. Soy Reyn el asistente asignado a vuestro grupo.", bg: "imagenes/lobby.png", face: "imagenes/chico111.png" },
+            { txt: "Acompañadme, por favor. Vamos a descender por el corredor principal hacia los laboratorios de pruebas. Nuestra red gestiona fluidos a presiones críticas para toda la ciudad.", bg: "imagenes/pasillo-largo.jpg", face: "imagenes/chico-habla.png" },
+            { txt: "Ya hemos llegado a la sala de control del Sector 11. Vamos a proceder a la verificación rutinaria de las válvulas...", bg: "imagenes/compuerta11.jpg", face: "imagenes/chico111.png" },
+            { txt: "Los niveles de presión manométrica son estables, el flujo de agua es constante y... Espera. Un momento.", bg: "imagenes/puerta-sector11.jpg", face: "imagenes/chico-habla.png" },
+            { txt: "¿Qué es esa lectura? ¡Alerta de cavitación detectada! ¡Fallo estructural inminente en las tuberías principales!", bg: "imagenes/puerta-sector11.jpg", face: "imagenes/chico-sorpresa.png", error: true }
         ];
         function entrarJuego() {
             let elemento = document.documentElement;
@@ -228,9 +228,9 @@
             intvNarrador = setInterval(() => { 
                 cajaText.innerHTML += escena.txt.charAt(i); 
                 
-                if (escena.face === "chico-habla.png" && i % 3 === 0 && escena.txt.charAt(i) !== " ") {
+                if (escena.face === "imagenes/chico-habla.png" && i % 3 === 0 && escena.txt.charAt(i) !== " ") {
                     toggleHabla = !toggleHabla;
-                    foto.src = toggleHabla ? "chico-habla.png" : "chico111.png";
+                    foto.src = toggleHabla ? "imagenes/chico-habla.png" : "imagenes/chico111.png";
                 }
 
                 i++; 
@@ -254,7 +254,7 @@
             if (escena.error) {
                 if (sustoDisparado) return; 
                 sustoDisparado = true;
-                foto.src = "chico-sorpresa.png"; 
+                foto.src = "imagenes/chico-sorpresa.png"; 
                 document.getElementById('caja-narrador').style.cursor = 'default';
                 setTimeout(() => {
                     cajaText.innerHTML += "<br><br><span style='color:#ff073a; font-weight:bold; font-size:40px;'>[ ERROR: CONEXIÓN PERDIDA ]</span>";
@@ -267,7 +267,7 @@
                     }, 1500); 
                 }, 400); 
             } else {
-                if (escena.face === "chico-habla.png") { foto.src = "chico111.png"; }
+                if (escena.face === "imagenes/chico-habla.png") { foto.src = "imagenes/chico111.png"; }
                 document.getElementById('flecha-sig').style.display = "block";
             }
         }

@@ -14,17 +14,25 @@ dependencias de ejecución: se sirve como archivos planos y funciona abriendo
 
 ```
 .
-├── index.html        # Aplicación principal (SPA). Pantallas, retos y lógica.
-├── styles.css        # Hoja de estilos global (extraída de index.html).
-├── app.js            # Lógica del juego (extraída de index.html).
-├── narrador.html     # Introducción narrativa del Sector 11.
-├── alerta.html       # Pantalla de alerta / transición hacia los paneles de válvula.
-├── capilar-test.html # Mini-juego autónomo (interfaz de capilar).
-├── Servo1.html       # Panel de control de válvula 1 (MQTT hacia hardware real).
-├── Servo2.html       # Panel de control de válvula 2 (MQTT).
-├── Servo3.html       # Panel de control de válvula 3 / "Válvula 1" (MQTT).
-└── *.png/*.jpg/*.gif # Recursos gráficos (imágenes y GIFs animados).
+├── index.html          # Aplicación principal (SPA). Pantallas, retos y lógica.
+├── narrador.html       # Introducción narrativa del Sector 11.
+├── alerta.html         # Pantalla de alerta / transición hacia los paneles de válvula.
+├── capilar-test.html   # Mini-juego autónomo (interfaz de capilar).
+├── Servo1.html         # Panel de control de válvula 1 (MQTT hacia hardware real).
+├── Servo2.html         # Panel de control de válvula 2 (MQTT).
+├── Servo3.html         # Panel de control de válvula 3 / "Válvula 1" (MQTT).
+├── css/
+│   └── styles.css      # Hoja de estilos global (extraída de index.html).
+├── js/
+│   └── app.js          # Lógica del juego (extraída de index.html).
+└── imagenes/           # Recursos gráficos (PNG, JPG y GIFs animados).
 ```
+
+Los HTML viven en la raíz: `index.html` debe estarlo para que GitHub Pages lo sirva como
+página de inicio, y los paneles `Servo*.html` pueden estar referenciados por URL directa
+desde el kiosco. Las rutas se resuelven así: desde HTML y desde `js/app.js` → `imagenes/…`;
+desde `css/styles.css` → `../imagenes/…` (las `url()` del CSS se resuelven relativas a la
+propia hoja).
 
 Las páginas `Servo1.html`, `Servo2.html` y `Servo3.html` son los paneles de mando de las
 válvulas físicas del laboratorio: cargan la librería [Eclipse Paho](https://www.eclipse.org/paho/)
@@ -52,16 +60,19 @@ navegadores bajo `file://`; el juego en sí no depende de él.
 
 No hay suite de tests automatizados. La verificación se hizo con:
 
-- **Sintaxis JS**: `node --check app.js` (y los `<script>` inline extraídos a ficheros temporales).
+- **Sintaxis JS**: `node --check js/app.js` (y los `<script>` inline extraídos a ficheros temporales).
 - **Página en navegador real**: carga *headless* de cada HTML (Chrome/Edge, `--headless=new --dump-dom`)
   comprobando que no se produzcan errores de consola (`TypeError`, `ReferenceError`, 404).
-- **Comprobación de la extracción**: los bloques CSS/JS movidos a `styles.css`/`app.js` se
+- **Comprobación de la extracción**: los bloques CSS/JS movidos a `css/styles.css`/`js/app.js` se
   compararon carácter a carácter con los originales de `index.html`.
+- **Tras reorganizar en carpetas**: se repitió la carga *headless* de las 5 páginas
+  (cero 404 y cero errores de consola) y se verificó por CDP que el JS sigue ejecutándose,
+  que el CSS aplica y que las imágenes resuelven desde `imagenes/`.
 
 Para repetir la comprobación rápida de sintaxis:
 
 ```bash
-node --check app.js
+node --check js/app.js
 ```
 
 ## Publicación (GitHub Pages)
@@ -81,8 +92,12 @@ la identidad visual ni el comportamiento funcional previsto del juego. Ver
 [`NOTES.md`](NOTES.md) para las decisiones abiertas y el pendiente real.
 
 - **Extracción de CSS/JS**: se movieron los bloques `<style>` y `<script>` embebidos de
-  `index.html` a `styles.css` y `app.js`, conservando el orden original de las reglas
+  `index.html` a `css/styles.css` y `js/app.js`, conservando el orden original de las reglas
   (y por tanto la cascada) y el contenido byte a byte.
+- **Reorganización en carpetas**: los recursos se agruparon por tipo — `imagenes/`, `css/`
+  y `js/` — actualizando todas las referencias (HTML, CSS y JS). Los HTML se mantienen en
+  la raíz por compatibilidad con GitHub Pages y el kiosco. Verificado con carga *headless*
+  (cero 404) y comprobación funcional por CDP.
 - **Crítico — se restauraron los modales**: `mostrarAlerta()` y `preguntarFusible()`
   accedían a `#modal-alerta` / `#modal-prompt`, que **no existían** en el HTML y lanzaban
   `TypeError`, rompiendo el quiz de fusibles. Se recuperó el marcado original del historial

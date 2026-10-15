@@ -13,8 +13,8 @@ ninguno deja la pantalla en negro y se documenta aquí.
 
 | Fichero ausente | Dónde se referencia | Efecto actual |
 |-----------------|---------------------|---------------|
-| `tuberia.png` | `styles.css:435` (`.fondo-tuberia-full`), usado por `index.html:472` (`#pantalla-habitacion-3`) | La regla tiene `background-color: #0b151a` de respaldo, así que se ve el color sólido oscuro en lugar de la foto de tubería. |
-| `puerta-sector11.jpg` | `app.js:146-147` (fondo de las escenas 4–5 del narrador) | Esas escenas se muestran sin imagen de fondo (capa vacía). Se quitó de la lista de precarga para evitar el 404 en la carga inicial. |
+| `tuberia.png` | `css/styles.css:435` (`.fondo-tuberia-full`), usado por `index.html:472` (`#pantalla-habitacion-3`) | La regla tiene `background-color: #0b151a` de respaldo, así que se ve el color sólido oscuro en lugar de la foto de tubería. |
+| `puerta-sector11.jpg` | `js/app.js:146-147` (fondo de las escenas 4–5 del narrador) | Esas escenas se muestran sin imagen de fondo (capa vacía). Se quitó de la lista de precarga para evitar el 404 en la carga inicial. |
 | `mapa_neon.png` | `narrador.html:80` (`.contenedor-mapa`) | El contenedor del mapa aparece vacío. |
 
 **Acción sugerida:** añadir los tres ficheros con ese nombre exacto, o actualizar las
