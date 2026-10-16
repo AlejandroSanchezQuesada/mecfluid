@@ -11,16 +11,7 @@
 </head>
 <body ontouchstart="">
 
-    <script>
-        // ================= FIN ESTILOS CSS/PRECARGA DE IMÁGENES ================= //
-        const recursosGraficos = [
-            "imagenes/fondo (2).png", "imagenes/reactor.gif", "imagenes/departamento.jpg", "imagenes/techlab.jpg",
-            "imagenes/lobby.png", "imagenes/pasillo-largo.jpg", "imagenes/compuerta11.jpg",
-            "imagenes/chico-idle.png", "imagenes/chico-habla.png", "imagenes/chico-sorpresa.png", "imagenes/chico111.png", "imagenes/presa.gif","imagenes/valvula.gif",
-            "imagenes/pizarra.png", "imagenes/papers.png", "imagenes/escazul.png"
-        ];
-        recursosGraficos.forEach(ruta => { const img = new Image(); img.src = ruta; });
-    </script>
+    <script src="js/preload.js"></script>
     
     <div id="pantalla-hub" class="pantalla activa">
         <img src="imagenes/escazul.png" alt="Logo UPCT" class="upct-logo-lateral">
