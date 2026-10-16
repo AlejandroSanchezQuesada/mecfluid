@@ -1,0 +1,51 @@
+/* ==========================================================================
+   AQUALAB - MECFLUID | Hoja de estilos: pages/narrador.html
+   Extraída de pages/narrador.html (Fase 2: separación HTML/CSS/JS).
+   Se conserva el orden original de las reglas para no alterar la cascada.
+   ========================================================================== */
+
+        body { margin: 0; padding: 0; height: 100vh; overflow: hidden; font-family: 'VT323', monospace; background-color: #050505; color: white; }
+        
+        /* Capas de Pantallas */
+        .pantalla { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; flex-direction: column; align-items: center; justify-content: center; z-index: 1; }
+        .pantalla.activa { display: flex; z-index: 10; }
+
+        /* ================= PANTALLA 1: INICIO ================= */
+        #pantalla-inicio { background: url('../imagenes/fondo (2).png') center/cover; }
+        .boton-inicio { position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 100px; cursor: pointer; background: rgba(0,255,255,0); z-index: 9999; }
+        .boton-inicio:hover { background: rgba(0, 255, 255, 0.2); box-shadow: 0 0 30px #00ffff; border-radius: 10px; }
+
+        /* ================= PANTALLA 2: NARRADOR ================= */
+        #pantalla-narrador { background: url('../imagenes/fondo (2).png') center/cover; }
+        #filtro-oscuro { position: absolute; width: 100%; height: 100%; background: rgba(0, 10, 25, 0.7); backdrop-filter: blur(5px); z-index: 1; }
+        
+        #caja-narrador { 
+            position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%); 
+            width: 90%; background: rgba(0, 30, 60, 0.85); border: 2px solid #00ffff; 
+            border-radius: 12px; padding: 30px; z-index: 5; display: flex; align-items: center; gap: 30px;
+            box-sizing: border-box; 
+        }
+        #foto-narrador { width: 220px; height: auto; filter: drop-shadow(0 0 15px #00ffff); flex-shrink: 0; }
+        
+        #texto-narrador { 
+            color: #00ffff; font-size: 32px; line-height: 1.4; 
+            white-space: normal; word-wrap: break-word; flex: 1;
+        }
+
+        /* ================= MAPAS (DISEÑO ESTRECHO) ================= */
+        #pantalla-mapa, #pantalla-habitacion { background: #001a33; }
+        .titulo-mapa { color: #00ffff; font-size: 36px; margin-bottom: 10px; text-transform: uppercase; text-shadow: 0 0 10px #00ffff; }
+        .contenedor-mapa { position: relative; width: 800px; height: 500px; border: 2px solid #00ffff; box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); }
+        
+        .nodo { position: absolute; width: 45px; height: 45px; border-radius: 50%; transform: translate(-50%, -50%); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; border: 2px solid white; z-index: 20; transition: 0.3s; }
+        .nodo-rojo { background: rgba(255, 7, 58, 0.7); border-color: #ff073a; box-shadow: 0 0 15px #ff073a; animation: pulso 1s infinite; }
+        .nodo-verde { background: rgba(57, 255, 20, 0.7); border-color: #39ff14; box-shadow: 0 0 15px #39ff14; }
+        .nodo-bloqueado { background: #444; border-color: #666; color: #888; cursor: not-allowed; }
+
+        @keyframes pulso { 0%, 100% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.1); } }
+
+        /* ================= PANEL DE PROBLEMA ================= */
+        #pantalla-valvula { background: linear-gradient(rgba(0,30,60,0.95), rgba(0,10,20,0.95)), url('../imagenes/techlab.jpg') center/cover; }
+        .panel-azul { background: rgba(0, 43, 77, 0.95); padding: 35px; border-radius: 20px; border: 3px solid #00ffff; width: 520px; text-align: center; backdrop-filter: blur(10px); }
+        input { font-family: 'VT323'; font-size: 35px; width: 240px; background: #003366; color: #ffffff; border: 2px solid #00ffff; text-align: center; margin: 15px 0; outline: none; }
+        .btn-ui { font-family: 'VT323'; font-size: 26px; background: #00ffff; color: #000; border: none; padding: 10px 40px; cursor: pointer; font-weight: bold; border-radius: 5px; }
