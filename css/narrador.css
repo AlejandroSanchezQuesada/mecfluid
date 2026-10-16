@@ -49,3 +49,30 @@
         .panel-azul { background: rgba(0, 43, 77, 0.95); padding: 35px; border-radius: 20px; border: 3px solid #00ffff; width: 520px; text-align: center; backdrop-filter: blur(10px); }
         input { font-family: 'VT323'; font-size: 35px; width: 240px; background: #003366; color: #ffffff; border: 2px solid #00ffff; text-align: center; margin: 15px 0; outline: none; }
         .btn-ui { font-family: 'VT323'; font-size: 26px; background: #00ffff; color: #000; border: none; padding: 10px 40px; cursor: pointer; font-weight: bold; border-radius: 5px; }
+
+
+/* ==========================================================================
+   Estilos antes inline (Fase 2): convertidos a selectores desde pages/narrador.html.
+   Se usa #id, o clase duplicada (.x.x) para igualar la prioridad que tenia
+   el atributo style frente a reglas :hover/:disabled existentes.
+   ========================================================================== */
+
+#btn-mision { display: none; position: absolute; top: 40%; z-index: 100; }
+.u-texto-ff073a--tamano-50px.u-texto-ff073a--tamano-50px { color: #ff073a; font-size: 50px; }
+#texto-historia { font-size: 26px; max-width: 800px; text-align: left; margin: 20px; color: #39ff14; }
+#btn-start { display: none; }
+.u-fondo-url-imagenes-mapa-neon.u-fondo-url-imagenes-mapa-neon { background: url('../imagenes/mapa_neon.png') center/contain no-repeat; }
+#main-1 { top: 25%; left: 25%; }
+#main-2 { top: 25%; left: 75%; }
+#main-3 { top: 75%; left: 25%; }
+#main-4 { top: 75%; left: 75%; }
+.u-fondo-rgba-0-255-255-0-05--borde-estilo-dashed.u-fondo-rgba-0-255-255-0-05--borde-estilo-dashed { background: rgba(0, 255, 255, 0.05); border-style: dashed; }
+#sub-1 { top: 30%; left: 30%; }
+#sub-2 { top: 30%; left: 70%; }
+#sub-3 { top: 70%; left: 30%; }
+#sub-4 { top: 70%; left: 70%; }
+.u-margen-sup-15px.u-margen-sup-15px { margin-top: 15px; }
+#paso-info { color: #00ffff; font-size: 22px; }
+.u-texto-ffffff--margen-10px0.u-texto-ffffff--margen-10px0 { color: #ffffff; margin: 10px 0; }
+#enunciado { font-size: 26px; color: #e6f2ff; margin-bottom: 20px; }
+#feed { margin-top: 20px; font-size: 24px; }

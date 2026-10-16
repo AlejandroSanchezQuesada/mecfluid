@@ -11,11 +11,11 @@
 <body>
 
     <div class="panel-azul">
-        <h2 style="color:#00ffff; margin-top: 0; font-size: 38px;">PUERTA DE SEGURIDAD SECUNDARIA</h2>
-        <p style="font-size: 24px; text-align: left; margin-bottom: 20px; line-height: 1.3;">
+        <h2 class="u-texto-00ffff--margen-sup-0--tamano-38px">PUERTA DE SEGURIDAD SECUNDARIA</h2>
+        <p class="u-tamano-24px--alineado-izq--margen-inf-20px--interlineado-1-3">
             El sistema electrónico está bloqueado. Para cortocircuitarlo, debes aprovechar el fenómeno de capilaridad. 
             Inserta un capilar en el fluido para que este ascienda y toque <b>exactamente</b> los dos terminales eléctricos 
-            situados a una altura de <b style="color:#ff073a;">h = 30 mm</b>.
+            situados a una altura de <b class="u-texto-ff073a">h = 30 mm</b>.
         </p>
         
         <div class="datos-caja">
@@ -39,16 +39,16 @@
             </div>
         </div>
 
-        <p style="font-size: 26px; color:#e6f2ff; margin-bottom: 15px;">Selecciona el <b>diámetro (D)</b> del tubo capilar a insertar:</p>
+        <p class="u-tamano-26px--texto-e6f2ff--margen-inf-15px">Selecciona el <b>diámetro (D)</b> del tubo capilar a insertar:</p>
         
-        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <div class="u-display-flex--justificar-centro--margen-inf-20px">
             <button class="btn-ui" onclick="probarCapilar(0.5, 50)">0.5 mm</button>
             <button class="btn-ui" onclick="probarCapilar(1.0, 30)">1.0 mm</button>
             <button class="btn-ui" onclick="probarCapilar(2.0, 20)">2.0 mm</button>
             <button class="btn-ui" onclick="probarCapilar(5.0, 10)">5.0 mm</button>
         </div>
 
-        <div id="feed-capilar" style="font-size: 28px; height: 35px; font-weight: bold;"></div>
+        <div id="feed-capilar"></div>
     </div>
 
     <script src="../js/capilar-test.js"></script>

@@ -41,3 +41,17 @@
         
         .linea-objetivo { position: absolute; bottom: 150px; left: 0; width: 100%; border-top: 2px dashed rgba(255, 7, 58, 0.6); z-index: 1; }
         .texto-objetivo { position: absolute; bottom: 155px; left: 10px; color: #ff073a; font-size: 22px; font-weight: bold; text-shadow: 0 0 5px #000; }
+
+
+/* ==========================================================================
+   Estilos antes inline (Fase 2): convertidos a selectores desde pages/capilar-test.html.
+   Se usa #id, o clase duplicada (.x.x) para igualar la prioridad que tenia
+   el atributo style frente a reglas :hover/:disabled existentes.
+   ========================================================================== */
+
+.u-texto-00ffff--margen-sup-0--tamano-38px.u-texto-00ffff--margen-sup-0--tamano-38px { color: #00ffff; margin-top: 0; font-size: 38px; }
+.u-tamano-24px--alineado-izq--margen-inf-20px--interlineado-1-3.u-tamano-24px--alineado-izq--margen-inf-20px--interlineado-1-3 { font-size: 24px; text-align: left; margin-bottom: 20px; line-height: 1.3; }
+.u-texto-ff073a.u-texto-ff073a { color: #ff073a; }
+.u-tamano-26px--texto-e6f2ff--margen-inf-15px.u-tamano-26px--texto-e6f2ff--margen-inf-15px { font-size: 26px; color: #e6f2ff; margin-bottom: 15px; }
+.u-display-flex--justificar-centro--margen-inf-20px.u-display-flex--justificar-centro--margen-inf-20px { display: flex; justify-content: center; margin-bottom: 20px; }
+#feed-capilar { font-size: 28px; height: 35px; font-weight: bold; }
